@@ -1,9 +1,10 @@
 @font-face {
   font-family: 'Agustina';
-  src: url('/Users/aadithyaram/my-portfolio-new/public/assets/fonts/Agustina-Signature.otf') format('opentype');
+  src: url('/public/assets/fonts/Agustina-Signature.otf') format("opentype");
   font-weight: normal;
   font-style: normal;
 }
+
 
 body {
   font-family: 'Agustina', 'Inter', sans-serif;
