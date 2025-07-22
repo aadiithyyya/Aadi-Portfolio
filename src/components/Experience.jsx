@@ -1,4 +1,3 @@
-// Experience.jsx
 import "./Experience.css";
 
 const experience = [
@@ -22,15 +21,27 @@ const experience = [
 export default function Experience() {
   return (
     <section id="experience" className="experience-section">
-      <h2>Experience</h2>
-      <div className="timeline">
-        {experience.map((exp, i) => (
-          <div key={i} className="timeline-item">
-            <h3>{exp.role}</h3>
-            <p className="time">{exp.time}</p>
-            <p>{exp.desc}</p>
-          </div>
-        ))}
+      {/* 🎥 Background Video */}
+      <video
+        className="experience-bg-video"
+        src="/assets/images/aesthtic card hover.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
+      
+      <div className="experience-content">
+        <h2>Experience</h2>
+        <div className="timeline">
+          {experience.map((exp, i) => (
+            <div key={i} className="timeline-item">
+              <h3>{exp.role}</h3>
+              <p className="time">{exp.time}</p>
+              <p>{exp.desc}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

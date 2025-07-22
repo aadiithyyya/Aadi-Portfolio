@@ -1,18 +1,49 @@
-/* Experience.css */
 .experience-section {
-  background: url('/Users/aadithyaram/my-portfolio-new/public/assets/images/aesthtic card hover.mov') center center / cover no-repeat fixed;
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
   padding: 5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   text-align: center;
-        min-height: 80vh;
+  font-family: 'Inter', sans-serif;
+  z-index: 1;
+}
 
-    font-family: 'Inter', sans-serif; /* 👈 Force sans-serif */
+.experience-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.8;
+  pointer-events: none;
+}
 
+.experience-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.experience-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(90deg, #a855f7, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .timeline {
   max-width: 600px;
-  margin: 2rem auto 0;
+  margin: 0 auto;
   border-left: 2px solid #a855f7;
   padding-left: 2rem;
 }
@@ -20,6 +51,11 @@
 .timeline-item {
   margin-bottom: 2rem;
   position: relative;
+  background: rgba(30, 30, 30, 0.75);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.15);
 }
 
 .timeline-item::before {
@@ -30,15 +66,17 @@
   border-radius: 50%;
   position: absolute;
   left: -29px;
-  top: 5px;
+  top: 1.25rem;
 }
 
 .timeline-item h3 {
   color: #a855f7;
   font-weight: 600;
+  margin-bottom: 0.25rem;
 }
 
 .timeline-item .time {
   font-size: 0.9rem;
   color: #aaa;
+  margin-bottom: 0.5rem;
 }

@@ -1,7 +1,7 @@
 .skills-section {
   position: relative;
-  height: 20vh;
   padding: 5rem 2rem;
+  min-height: 25vh;
   color: #fff;
   text-align: center;
   font-family: 'Inter', sans-serif;
@@ -11,7 +11,7 @@
 .skills-video-wrapper {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   overflow: hidden;
 }
 
@@ -19,13 +19,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.15; /* Subtle background */
+  opacity: 0.8;
   pointer-events: none;
+  z-index: 0;
 }
 
 .skills-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .skills-grid {
@@ -37,26 +38,18 @@
 }
 
 .skill-pill {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
   border: 2px solid #a855f7;
   border-radius: 9999px;
   color: #a855f7;
   font-weight: 500;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(4px);
 }
 
 .skill-pill:hover {
   background: #a855f7;
   color: #000;
-}
-
-.line-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 1;
-  pointer-events: none;
 }

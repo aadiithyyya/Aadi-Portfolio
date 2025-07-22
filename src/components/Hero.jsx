@@ -17,21 +17,17 @@ const HeroPage = () => {
     document.body.appendChild(trailContainer);
 
     const onMouseMove = (e) => {
-      // Move cursor
       cursor.style.left = `${e.clientX}px`;
       cursor.style.top = `${e.clientY}px`;
 
       const target = e.target;
-
-      // Add cursor hover effect when over nav links
       if (target.closest('.navbar-links a')) {
         cursor.classList.add('cursor-hover-link');
-        return; // Stop trail effect
+        return;
       } else {
         cursor.classList.remove('cursor-hover-link');
       }
 
-      // Create particle trail
       const particle = document.createElement('div');
       particle.className = 'cursor-particle';
       particle.style.left = `${e.clientX}px`;
@@ -53,9 +49,16 @@ const HeroPage = () => {
   }, []);
 
   return (
-<div className="hero-container">
-  <img src="/assets/images/aesthtic card hover.mov" alt="stars bg" className="stars-bg" />
-  <div className="grain-overlay"></div>
+    <div className="hero-container">
+      {/* 🎥 Replaced broken .mov with .mp4 background video */}
+      <video
+        className="stars-bg"
+        src="/assets/images/aesthic3.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
       <div className="grain-overlay"></div>
 
       <div className="hero-card" data-aos="fade-up">

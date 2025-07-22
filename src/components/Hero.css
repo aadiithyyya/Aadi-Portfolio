@@ -3,20 +3,31 @@
   min-height: 80vh;
   overflow: hidden;
   padding: 4rem 2rem;
-  background: transparent;
   color: #fff;
   font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  z-index: 1;
+}
+
+.stars-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.8;
+  pointer-events: none;
 }
 
 .grain-overlay {
   position: absolute;
   inset: 0;
   background: url('https://grainy-gradients.vercel.app/noise.svg');
-  opacity: 0.03;
+  opacity: 0.04;
   pointer-events: none;
   z-index: 1;
   mix-blend-mode: soft-light;
@@ -24,29 +35,19 @@
 
 .hero-card {
   position: relative;
-  z-index: 5;
+  z-index: 2;
   display: flex;
   flex-direction: row;
   max-width: 1200px;
   width: 100%;
-  height: 120%;
-  background: url('/Users/aadithyaram/my-portfolio-new/public/assets/images/aesthic3.mp4') center center / cover no-repeat fixed;
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 2.5rem;
   border-radius: 2rem;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
   gap: 2rem;
   align-items: center;
   overflow: hidden;
-  transition: background 1s ease;
-}
-
-.hero-card::before {
-  content: none; /* remove glow on hover */
-}
-
-.hero-card:hover {
-  background: url('/Users/aadithyaram/my-portfolio-new/public/assets/images/aesthic3.mp4') center center / cover no-repeat fixed;
 }
 
 .hero-left {
@@ -78,23 +79,24 @@
   font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: #f0f0f0;
-  cursor: default;
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-role {
   font-size: 1.4rem;
-  color: #888;
+  color: #bbb;
   margin-bottom: 1rem;
 }
 
 .hero-bio {
-  font-size: 1rem;
-  color: #aaa;
+  font-size: 1.05rem;
+  color: #ccc;
   max-width: 600px;
 }
 
-/* 🔁 RESPONSIVE LAYOUT */
+/* RESPONSIVE */
 @media (max-width: 1024px) {
   .hero-card {
     flex-direction: column;
@@ -104,7 +106,6 @@
 
   .hero-left, .hero-right {
     width: 100%;
-    flex: unset;
   }
 
   .hero-name {
@@ -135,15 +136,4 @@
     width: 180px;
     height: 180px;
   }
-}
-
-.stars-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 1;
-  pointer-events: none;
 }

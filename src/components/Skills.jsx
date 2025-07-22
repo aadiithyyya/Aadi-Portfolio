@@ -6,8 +6,14 @@ export default function Skills() {
   return (
     <section id="skills" className="skills-section">
       <div className="skills-video-wrapper">
-        
-          <img src="/assets/images/aesthic3.mp4" alt="line bg" className="line-bg" />
+        <video
+          className="skills-bg-video"
+          src="/assets/images/aesthic3.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
       </div>
 
       <div className="skills-content">

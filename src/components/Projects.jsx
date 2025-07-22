@@ -21,19 +21,42 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects" className="projects-section">
-      <h2>Projects</h2>
-      <div className="projects-grid">
-        {projects.map((p, i) => (
-          <div key={i} className="project-card">
-            <h3>{p.title}</h3>
-            <p>{p.desc}</p>
-            <div className="project-tags">
-              {p.tech.map((t, j) => (
-                <span key={j}>{t}</span>
-              ))}
+      {/* 🔁 Background video */}
+      <video
+        className="projects-bg-video"
+        src="/assets/images/aesthtic.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
+
+      {/* 🧱 Foreground content */}
+      <div className="projects-content">
+        <h2>Projects</h2>
+        <div className="projects-grid">
+          {projects.map((p, i) => (
+            <div key={i} className="project-card">
+              <video
+                className="project-card-bg"
+                src="/assets/images/aesthic3.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+              <div className="project-content">
+                <h3>{p.title}</h3>
+                <p>{p.desc}</p>
+                <div className="project-tags">
+                  {p.tech.map((t, j) => (
+                    <span key={j}>{t}</span>
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
