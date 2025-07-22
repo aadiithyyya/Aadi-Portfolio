@@ -1,0 +1,44 @@
+.about-section {
+  padding: 5rem 2rem;
+    min-height: 80vh;
+
+  background: url('/Users/aadithyaram/my-portfolio-new/public/assets/images/aesthic card bg.mov');
+  color: #fff;
+  text-align: center;
+  font-family: 'Inter', sans-serif; /* 👈 Force sans-serif */
+}
+
+
+.about-intro {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 1rem auto 2rem;
+  color: #ccc;
+}
+
+.about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.about-card {
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.1);
+  width: 300px;
+  text-align: left;
+}
+
+.about-card h3 {
+  color: #a855f7;
+  margin-bottom: 1rem;
+}
+
+.about-card ul {
+  padding-left: 1rem;
+  list-style-type: disc;
+  color: #ccc;
+}

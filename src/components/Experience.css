@@ -1,0 +1,44 @@
+/* Experience.css */
+.experience-section {
+  background: url('/Users/aadithyaram/my-portfolio-new/public/assets/images/aesthtic.mov') center center / cover no-repeat fixed;
+  padding: 5rem 2rem;
+  color: #fff;
+  text-align: center;
+        min-height: 80vh;
+
+    font-family: 'Inter', sans-serif; /* 👈 Force sans-serif */
+
+}
+
+.timeline {
+  max-width: 600px;
+  margin: 2rem auto 0;
+  border-left: 2px solid #a855f7;
+  padding-left: 2rem;
+}
+
+.timeline-item {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #a855f7;
+  border-radius: 50%;
+  position: absolute;
+  left: -29px;
+  top: 5px;
+}
+
+.timeline-item h3 {
+  color: #a855f7;
+  font-weight: 600;
+}
+
+.timeline-item .time {
+  font-size: 0.9rem;
+  color: #aaa;
+}

@@ -1,0 +1,46 @@
+.projects-section {
+  padding: 5rem 2rem;
+  background: url('/Users/aadithyaram/my-portfolio-new/public/assets/images/aesthtic card hover.mov') center center / cover no-repeat fixed;
+  color: #fff;
+      min-height: 80vh;
+
+  text-align: center;
+    font-family: 'Inter', sans-serif; /* 👈 Force sans-serif */
+
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: url('/Users/aadithyaram/my-portfolio-new/public/assets/images/aesthic3.mp4') center center / cover no-repeat fixed;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 280px;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  color: #a855f7;
+  margin-bottom: 0.5rem;
+}
+
+.project-tags span {
+  display: inline-block;
+  background: #a855f7;
+  color: #fff;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  margin: 0.25rem;
+}

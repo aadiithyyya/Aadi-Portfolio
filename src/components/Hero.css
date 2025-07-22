@@ -1,0 +1,149 @@
+.hero-container {
+  position: relative;
+  min-height: 80vh;
+  overflow: hidden;
+  padding: 4rem 2rem;
+  background: transparent;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  background: url('https://grainy-gradients.vercel.app/noise.svg');
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: soft-light;
+}
+
+.hero-card {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  width: 100%;
+  height: 120%;
+  background: url('/Users/aadithyaram/my-portfolio-new/public/assets/images/aesthic3.mp4') center center / cover no-repeat fixed;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2.5rem;
+  border-radius: 2rem;
+  backdrop-filter: blur(12px);
+  gap: 2rem;
+  align-items: center;
+  overflow: hidden;
+  transition: background 1s ease;
+}
+
+.hero-card::before {
+  content: none; /* remove glow on hover */
+}
+
+.hero-card:hover {
+  background: url('/Users/aadithyaram/my-portfolio-new/public/assets/images/aesthic3.mp4') center center / cover no-repeat fixed;
+}
+
+.hero-left {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #333;
+  animation: floatImage 3s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+.hero-name {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #f0f0f0;
+  cursor: default;
+}
+
+.hero-role {
+  font-size: 1.4rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.hero-bio {
+  font-size: 1rem;
+  color: #aaa;
+  max-width: 600px;
+}
+
+/* 🔁 RESPONSIVE LAYOUT */
+@media (max-width: 1024px) {
+  .hero-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .hero-left, .hero-right {
+    width: 100%;
+    flex: unset;
+  }
+
+  .hero-name {
+    font-size: 2.4rem;
+  }
+
+  .hero-img {
+    width: 220px;
+    height: 220px;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-name {
+    font-size: 2rem;
+  }
+
+  .hero-role {
+    font-size: 1.2rem;
+  }
+
+  .hero-bio {
+    font-size: 0.95rem;
+  }
+
+  .hero-img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.stars-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 1;
+  pointer-events: none;
+}
