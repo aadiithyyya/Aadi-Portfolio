@@ -54,7 +54,7 @@ const HeroPage = () => {
 
   return (
 <div className="hero-container">
-  <img src="/assets/images/aesthtic.mov" alt="stars bg" className="stars-bg" />
+  <img src="/assets/images/aesthtic card hover.mov" alt="stars bg" className="stars-bg" />
   <div className="grain-overlay"></div>
       <div className="grain-overlay"></div>
 
