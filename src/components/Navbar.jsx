@@ -1,9 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Navbar.css";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [animateLogo, setAnimateLogo] = useState(false);
+
+  const navRef = useRef(null);
+  const hamRef = useRef(null);
+  const wrapperRef = useRef(null); // 🆕 wrapper for card
 
   const handleLinkClick = () => setMenuOpen(false);
 
@@ -12,6 +16,27 @@ export default function Navbar() {
     setAnimateLogo(true);
     setTimeout(() => setAnimateLogo(false), 2000);
   };
+
+  // 🧠 Close menu if click outside nav, ham, or wrapper
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        !navRef.current?.contains(e.target) &&
+        !hamRef.current?.contains(e.target) &&
+        !wrapperRef.current?.contains(e.target)
+      ) {
+        setMenuOpen(false);
+      }
+    };
+
+    if (menuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [menuOpen]);
 
   useEffect(() => {
     document.documentElement.style.scrollBehavior = "smooth";
@@ -37,7 +62,8 @@ export default function Navbar() {
         </h1>
 
         <button
-          className="hamburger"
+          ref={hamRef}
+          className={`hamburger ${menuOpen ? "open" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle navigation"
         >
@@ -46,13 +72,18 @@ export default function Navbar() {
           <span className="bar" />
         </button>
 
-        <nav className={`navbar-links ${menuOpen ? "open" : ""}`}>
-          {["about", "projects", "skills", "experience", "contact"].map((id) => (
-            <a key={id} href={`#${id}`} onClick={handleLinkClick}>
-              {id.charAt(0).toUpperCase() + id.slice(1)}
-            </a>
-          ))}
-        </nav>
+        <div
+          ref={wrapperRef} // 🆕 assign the wrapper ref
+          className={`navbar-links-wrapper ${menuOpen ? "open" : ""}`}
+        >
+          <nav ref={navRef} className={`navbar-links ${menuOpen ? "open" : ""}`}>
+            {["about", "projects", "skills", "experience", "contact"].map((id) => (
+              <a key={id} href={`#${id}`} onClick={handleLinkClick}>
+                {id.charAt(0).toUpperCase() + id.slice(1)}
+              </a>
+            ))}
+          </nav>
+        </div>
       </div>
     </header>
   );

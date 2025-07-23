@@ -1,53 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  background: transparent;
-  overflow: hidden;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .navbar-bg-video {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+  inset: 0;
   width: 100%;
+  height: 100%;
   object-fit: cover;
+  opacity: 0.95;
   z-index: 0;
-  opacity: 1;
   pointer-events: none;
 }
 
 .navbar-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0.6rem 1.5rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: 0 2rem;
-  
+  justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 .navbar-logo {
-  font-family: 'Agustina', cursive;
-  font-size: 1.8rem;
-  color: white;
+  font-family: 'Agustina', sans-serif;
+  font-size: 1.6rem;
+  color: #ffffff;
+  font-weight: normal;
+  letter-spacing: 1px;
   cursor: pointer;
-  position: relative;
-  white-space: nowrap;
-  transition: all 0.3s ease;
 }
 
-/* ✍️ Signature animation */
+/* ✍️ Logo click animation */
 .signature-animate {
   animation: signatureFadeIn 2s ease-in-out forwards;
 }
@@ -66,82 +61,154 @@
   }
 }
 
+/* 🍔 Hamburger - morphing animation */
 .hamburger {
+  margin-left: 90px;
   display: none;
   flex-direction: column;
+  justify-content: center;
   gap: 5px;
+  width: 45px;
+  height: 25px;
   background: transparent;
   border: none;
   cursor: pointer;
-  z-index: 2;
+  z-index: 20;
+  position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
 .hamburger .bar {
-  width: 25px;
+  width: 100%;
   height: 3px;
-  background-color: white;
-  border-radius: 2px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all 0.4s ease-in-out;
 }
 
-/* Nav links */
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* 🔗 Desktop Nav */
 .navbar-links {
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: auto;
+  transition: all 0.3s ease;
 }
 
 .navbar-links a {
-  position: relative;
-  text-decoration: none;
-  color: white;
   font-family: 'Inter', sans-serif;
-  font-size: 1rem;
+  position: relative;
+  color: #cccccc;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  padding: 0.5rem 0.2rem;
   transition: color 0.3s ease;
 }
 
 .navbar-links a::after {
   content: "";
   position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0);
-  transform-origin: center;
+  left: 0;
+  bottom: -3px;
   width: 100%;
   height: 2px;
-  background-color: #994bca; /* Hard aesthetic purple */
+  background: linear-gradient(90deg, #a855f7, #0ff);
+  transform: scaleX(0);
+  transform-origin: left;
   transition: transform 0.3s ease;
+  border-radius: 8px;
 }
 
 .navbar-links a:hover {
-  color: #dbd5e1;
+  color: #ffffff;
 }
-
 .navbar-links a:hover::after {
-  transform: translateX(-50%) scaleX(1);
+  transform: scaleX(1);
 }
 
-
-/* 📱 Responsive */
+/* 📱 Mobile Styles */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
   }
 
-  .navbar-links {
+  .navbar-links-wrapper {
     position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: rgba(20, 20, 20, 0.9);
+    top: 120px;
+    right: 10px;
+    background: rgba(20, 19, 19, 0.76);  /* 🔮 Mild tint */
+    backdrop-filter: blur(10px);
+    padding: 1rem 0.8rem;
+    border-radius: 20px 0 0 20px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.305);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    z-index: 15;
+    pointer-events: none;
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 2rem 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
+    align-items: flex-end;
   }
 
-  .navbar-links.open {
-    max-height: 500px;
+  .navbar-links-wrapper.open {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .navbar-links a {
+    width: 130px;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.8) translate(20px, -20px);
+    transition: all 0.4s ease;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    background: url('/public/assets/images/l0IVPpc.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid #07295332;
+    border-radius: 10px;
+    padding: 0.65rem 0;
+    backdrop-filter: blur(4px);
+    text-decoration: none;
+  }
+
+  .navbar-links.open a {
+    opacity: 1;
+    transform: scale(1) translate(0, 0);
+  }
+
+  .navbar-links.open a:nth-child(1) { transition-delay: 0.05s; }
+  .navbar-links.open a:nth-child(2) { transition-delay: 0.1s; }
+  .navbar-links.open a:nth-child(3) { transition-delay: 0.15s; }
+  .navbar-links.open a:nth-child(4) { transition-delay: 0.2s; }
+  .navbar-links.open a:nth-child(5) { transition-delay: 0.25s; }
+
+  .navbar-links a:hover {
+    background: rgba(168, 85, 247, 0.2);
+    transform: scale(1.05);
   }
 }
