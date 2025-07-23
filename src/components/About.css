@@ -1,7 +1,7 @@
 .about-section {
   position: relative;
   overflow: hidden;
-  min-height: 80vh;
+  min-height: 100vh;
   padding: 5rem 2rem;
   display: flex;
   align-items: center;

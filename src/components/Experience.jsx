@@ -4,7 +4,7 @@ const experience = [
   {
     role: "SDE Intern @ SAP Labs",
     time: "Aug 2025 – Present",
-    desc: "Working on LLMs and internal tooling in Bangalore.",
+    desc: "Starting this August in SAP Bangalore.",
   },
   {
     role: "AI Intern @ Acmegrade",
@@ -13,8 +13,13 @@ const experience = [
   },
   {
     role: "Data Analyst Intern @ Unified Mentor",
-    time: "June – July 2024",
+    time: "June 2024 – July 2024",
     desc: "Built analytics dashboards and KPI reports from large data sets.",
+  },
+  {
+    role: "Student Scholar",
+    time: "September 2019",
+    desc: "Acquired 3 Medals @ The World Scholar's Cup 2019 - Global Round in Manila, Philippines.",
   },
 ];
 
@@ -53,6 +58,16 @@ export default function Experience() {
             </div>
           ))}
         </div>
+        <div
+        className="scroll-hint"
+        data-aos="fade-up"
+        onClick={() => {
+          document.getElementById("certifications")?.scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        <span className="scroll-text">scroll</span>
+        <div className="scroll-line" />
+      </div>
       </div>
     </section>
   );

@@ -7,7 +7,6 @@ const HeroPage = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
 
-    // Cursor + Trail Setup
     const cursor = document.createElement('div');
     cursor.className = 'custom-cursor';
     document.body.appendChild(cursor);
@@ -23,7 +22,6 @@ const HeroPage = () => {
       const target = e.target;
       if (target.closest('.navbar-links a')) {
         cursor.classList.add('cursor-hover-link');
-        return;
       } else {
         cursor.classList.remove('cursor-hover-link');
       }
@@ -50,7 +48,6 @@ const HeroPage = () => {
 
   return (
     <div className="hero-container">
-      {/* 🎥 Replaced broken .mov with .mp4 background video */}
       <video
         className="stars-bg"
         src="/assets/images/aesthic card bg.mp4"
@@ -62,17 +59,35 @@ const HeroPage = () => {
       <div className="grain-overlay"></div>
 
       <div className="hero-card" data-aos="fade-up">
-      
         <div className="hero-left">
           <h1 className="hero-name">Aadithya Ram</h1>
           <p className="hero-role">SDE Intern @ SAP Labs</p>
-          <p className="hero-bio">Crafting futuristic tech with Gen Z vibes ⚡</p>
+          <p className="hero-bio">
+            Turning vision into products 🚀 | Full-Stack + AI + Data Science | Gen Z Builder & Hackathon Enthusiast
+          </p>
+
+          <div className="hero-links">
+            <a href="/assets/resume/Aadithya-Ram-Resume.pdf" target="_blank" rel="noopener noreferrer" className="hero-btn">📄 Resume</a>
+            <a href="https://github.com/aadiithyyya" target="_blank" rel="noopener noreferrer" className="hero-btn">💻 GitHub</a>
+            <a href="https://linkedin.com/in/aadiithyyya" target="_blank" rel="noopener noreferrer" className="hero-btn">🔗 LinkedIn</a>
+          </div>
         </div>
 
         <div className="hero-right" data-aos="zoom-in">
           <img src="/assets/images/myimage.jpg" alt="Aadithya Ram" className="hero-img" />
         </div>
-        
+      </div>
+
+      {/* Scroll Hint (below card, centered) */}
+      <div
+        className="scroll-hint"
+        data-aos="fade-up"
+        onClick={() => {
+          document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        <span className="scroll-text">scroll</span>
+        <div className="scroll-line" />
       </div>
     </div>
   );

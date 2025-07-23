@@ -1,7 +1,7 @@
 .projects-section {
   position: relative;
   padding: 5rem 2rem;
-  min-height: 85vh;
+  min-height: 100vh;
   color: #fff;
   text-align: center;
   font-family: 'Inter', sans-serif;
@@ -15,7 +15,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.8;
+  opacity: 0.3;
   z-index: 0;
   pointer-events: none;
 }
@@ -25,7 +25,6 @@
   z-index: 2;
 }
 
-/* ✅ Title styled like Experience section */
 .projects-title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -68,7 +67,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.75;
+  opacity: 0.3;
   pointer-events: none;
   z-index: 1;
 }
@@ -76,36 +75,67 @@
 .project-content {
   position: relative;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(10, 10, 10, 0.6); /* slightly darker for readability */
   padding: 2rem;
   border-radius: inherit;
 }
 
 .project-card h3 {
-  color: #a855f7;
+  color: #91b8fc;
   margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-shadow: 0 0 8px rgba(232, 121, 249, 0.2);
+  transition: color 0.3s ease;
+}
+
+.project-card h3:hover {
+  color: #f472b6;
 }
 
 .project-card p {
-  color: #ccc;
+  color: #faf9fa;
   font-size: 0.95rem;
   margin-bottom: 0.8rem;
+  line-height: 1.5;
 }
 
 .project-tags span {
   display: inline-block;
-  background: #a855f7;
-  color: #fff;
-  padding: 0.35rem 0.7rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
+  padding: 0.5rem 1.2rem;
+  border: 2px solid #a855f7;
+  border-radius: 999px;
+  color: #a855f7;
+  font-weight: 500;
+  font-size: 0.6rem;
   margin: 0.25rem;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(4px);
 }
 
 .project-tags span:hover {
-  background: #9333ea;
+  background: #a855f7;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
+}
+
+.project-links {
+  margin-top: 10px;
+}
+
+.project-links a {
+  margin-right: 10px;
+  font-size: 0.85rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+  color: white;
+  border-color: white;
 }
 
 /* 📱 Responsive */
@@ -113,4 +143,57 @@
   .project-card {
     width: 90%;
   }
+}
+
+.icon-link {
+  font-size: 1.2rem;
+  vertical-align: middle;
+  color: #fdffff;
+  transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+  color: white;
+}
+.scroll-hint {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: floatHint 3s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.scroll-text {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.2em;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.scroll-text:hover {
+  transform: scale(1.1) rotate(-2deg);
+  color: #ad62f8f1;
+}
+
+.scroll-line {
+  width: 3px;
+  height: 200px;
+  background: linear-gradient(to bottom, #fefafab5, #ffffff11);
+  border-radius: 1px;
+  animation: pulseLine 4s ease-in-out infinite;
+}
+
+@keyframes floatHint {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(8px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulseLine {
+  0%, 100% { opacity: 0.3; height: 20px; }
+  50% { opacity: 1; height: 30px; }
 }

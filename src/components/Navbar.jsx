@@ -77,7 +77,7 @@ export default function Navbar() {
           className={`navbar-links-wrapper ${menuOpen ? "open" : ""}`}
         >
           <nav ref={navRef} className={`navbar-links ${menuOpen ? "open" : ""}`}>
-            {["about", "projects", "skills", "experience", "contact"].map((id) => (
+            {["about", "projects", "skills", "experience", "certifications","contact"].map((id) => (
               <a key={id} href={`#${id}`} onClick={handleLinkClick}>
                 {id.charAt(0).toUpperCase() + id.slice(1)}
               </a>

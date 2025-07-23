@@ -46,7 +46,7 @@ export default function Footer() {
 
       <footer className="custom-footer">
         <p className="footer-text">
-          © 2025 <span className="footer-name">Aadithya Ram</span> • Vibecoded with React & Tailwind •{" "}
+          © 2025 <span className="footer-name">Aadithya Ram</span> • Vibecoded from scratch with React & Tailwind 🙌🏻•{" "}
           <a
             href="https://github.com/aadiithyyya"
             target="_blank"

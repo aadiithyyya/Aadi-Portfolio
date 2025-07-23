@@ -1,6 +1,13 @@
 import "./Skills.css";
 
-const skills = ["Python", "React", "Flask", "MongoDB", "TensorFlow", "GPT-4", "Node.js", "SQL"];
+const skills = {
+  "Languages & Core": ["Python", "JavaScript", "C", "SQL"],
+  "Frameworks & Libraries": ["React", "Node.js", "Flask", "Django", "Streamlit", "React Native"],
+  "AI / ML / Data Science": ["TensorFlow", "PyTorch", "Scikit-Learn", "GPT-4", "BERT", "ARIMA", "NLP", "Deep Learning", "EDA", "Feature Engineering"],
+  "Databases & Cloud": ["MongoDB", "Firebase", "AWS S3", "SQLite"],
+  "APIs & Auth": ["PLAID API", "Appwrite", "OAuth 2.0", "GoogleAuth", "REST APIs"],
+  "Tools & Platforms": ["VSCode", "Jupyter", "GitHub", "XCode", "Dialogflow", "Playwright", "Google Cloud"]
+};
 
 export default function Skills() {
   return (
@@ -16,13 +23,34 @@ export default function Skills() {
         />
       </div>
 
-      <div className="skills-content">
-        <h2>Skills</h2>
-        <div className="skills-grid">
-          {skills.map((skill, i) => (
-            <span key={i} className="skill-pill">{skill}</span>
+      {/* 🧱 Foreground content */}
+      <div className="projects-content">
+        <h3 className="projects-title">Skills</h3>
+        <p className="projects-subtitle">A curated set of my core technical skills.</p>
+
+
+        <div className="skills-category-wrapper">
+          {Object.entries(skills).map(([category, skillSet], i) => (
+            <div key={i} className="skills-category">
+              <h3 className="skills-category-title">{category}</h3>
+              <div className="skills-grid">
+                {skillSet.map((skill, j) => (
+                  <span key={j} className="skill-pill">{skill}</span>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
+        <div
+        className="scroll-hint"
+        data-aos="fade-up"
+        onClick={() => {
+          document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        <span className="scroll-text">scroll</span>
+        <div className="scroll-line" />
+      </div>
       </div>
     </section>
   );
