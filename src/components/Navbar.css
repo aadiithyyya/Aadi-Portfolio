@@ -2,8 +2,9 @@
 
 @font-face {
   font-family: 'Agustina';
-  src: url('/Users/aadithyaram/my-portfolio-new/public/assets/fonts/Agustina-Signature.otf') format('opentype');
+  src: url('/assets/fonts/Agustina-Signature.otf') format('opentype');
 }
+
 
 .navbar {
   position: fixed;
