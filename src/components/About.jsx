@@ -6,13 +6,13 @@ export default function About() {
       {/* 🎥 Background Video */}
       <video
         className="about-bg-video"
-        src="/assets/images/aesthtic.mp4"
+        src="/assets/images/aesthtic card hover.mp4"
         autoPlay
         muted
         loop
         playsInline
       />
-      
+
       <div className="about-content">
         <h2>About Me</h2>
         <p className="about-intro">
@@ -20,6 +20,14 @@ export default function About() {
         </p>
         <div className="about-grid">
           <div className="about-card">
+            <video
+              className="card-bg-video"
+              src="/assets/images/aesthic3.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
             <h3>Core Traits</h3>
             <ul>
               <li>Creative Problem Solver</li>
@@ -29,6 +37,14 @@ export default function About() {
             </ul>
           </div>
           <div className="about-card">
+            <video
+              className="card-bg-video"
+              src="/assets/images/aesthic3.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
             <h3>Currently...</h3>
             <ul>
               <li>Working on LLMs at SAP</li>

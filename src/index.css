@@ -68,3 +68,10 @@ body {
     transform: scaleX(2) translate(-50%, -50%) rotate(45deg);
   }
 }
+
+/* Prevent cursor glow from appearing on small screens just in case */
+@media (max-width: 768px) {
+  #cursor-glow {
+    display: none !important;
+  }
+}

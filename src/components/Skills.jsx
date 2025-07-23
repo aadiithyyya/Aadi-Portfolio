@@ -8,7 +8,7 @@ export default function Skills() {
       <div className="skills-video-wrapper">
         <video
           className="skills-bg-video"
-          src="/assets/images/aesthic3.mp4"
+          src="/assets/images/aesthic card bg.mp4"
           autoPlay
           muted
           loop

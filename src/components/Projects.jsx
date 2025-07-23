@@ -24,7 +24,7 @@ export default function Projects() {
       {/* 🔁 Background video */}
       <video
         className="projects-bg-video"
-        src="/assets/images/aesthtic.mp4"
+        src="/assets/images/aesthic card bg.mp4"
         autoPlay
         muted
         loop
@@ -33,7 +33,9 @@ export default function Projects() {
 
       {/* 🧱 Foreground content */}
       <div className="projects-content">
-        <h2>Projects</h2>
+        <h3 className="projects-title">Projects</h3>
+        <p className="projects-subtitle">A curated set of my most impactful builds.</p>
+
         <div className="projects-grid">
           {projects.map((p, i) => (
             <div key={i} className="project-card">

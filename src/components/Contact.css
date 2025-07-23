@@ -4,41 +4,63 @@
   position: relative;
   padding: 4rem 2rem;
   min-height: 60vh;
-  text-align: center;
   color: #fff;
   font-family: 'Inter', sans-serif;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
 .contact-bg-video {
   position: absolute;
-  inset: 0;
-  width: 100%;
+  top: 0;
+  left: 0;
   height: 100%;
+  width: 100%;
   object-fit: cover;
-  opacity: 0.8;
+  opacity: 0.4;
   z-index: 0;
   pointer-events: none;
 }
 
-.contact-section h2 {
+@media (min-width: 768px) {
+  .contact-bg-video {
+    width: 50%;
+      opacity: 0.6;
+
+  }
+}
+
+/* ✅ Wrapper for shifting content */
+.contact-content {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  max-width: 600px;
+}
+
+@media (min-width: 768px) {
+  .contact-content {
+    text-align: center;
+    margin-left: 40%;
+  }
+}
+
+.contact-content h2 {
   font-size: 2.4rem;
   font-weight: 700;
   background: linear-gradient(90deg, #a855f7, #f472b6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 2rem;
-  z-index: 1;
 }
 
 .contact-info {
-  z-index: 1;
   font-size: 1rem;
   line-height: 1.8;
   color: #e0e0e0;
+  margin-bottom: 1.5rem;
 }
 
 .contact-info p a {
@@ -53,12 +75,16 @@
 }
 
 .quick-actions {
-  margin-top: 2rem;
-  z-index: 1;
   display: flex;
   justify-content: center;
   gap: 1.2rem;
   flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .quick-actions {
+    justify-content: flex-start;
+  }
 }
 
 .contact-button {
@@ -78,13 +104,13 @@
   background: linear-gradient(to right, #9333ea, #db2777);
 }
 
-/* 🌐 Responsive */
+/* 🌐 Mobile responsiveness */
 @media (max-width: 600px) {
   .contact-section {
     padding: 3rem 1.5rem;
   }
 
-  .contact-section h2 {
+  .contact-content h2 {
     font-size: 2rem;
   }
 
