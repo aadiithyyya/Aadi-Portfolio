@@ -6,54 +6,61 @@ const projects = [
     title: "SafeZone – Attendance Checker",
     tech: ["Node.js", "Render", "Vercel", "Web Scraping"],
     desc: "Automated college portal bot with secure backend and one-click frontend sync.",
-    github: "https://github.com/aadiithyyya",
-    demo: "https://linkedin.com/in/aadiithyyya",
+    github: "https://github.com/aadiithyyya/SafeZone-Attendance",
+    demo: "https://www.linkedin.com/posts/aadiithyyya_safezone-attendance-checker-this-is-activity-7290009516413239296-9tJA?utm_source=share&utm_medium=member_desktop&rcm=ACoAAELRxAoBE8S8AMTbFhvzk9ZHWTyMVj7ScPM",
   },
   {
     title: "HealthEZY – Smart Healthcare App",
     tech: ["React Native", "Firebase", "AWS", "Node.js"],
     desc: "AI-powered mobile platform for diagnostics, IoT monitoring, and emergency alerts.",
-    github: "https://github.com/aadiithyyya",
-    demo: "https://linkedin.com/in/aadiithyyya",
+    github: "https://github.com/aadiithyyya/EY-Techathon-HealthEZY",
+    demo: "https://www.linkedin.com/posts/aadiithyyya_eytechathon-healthezy-hackathonexperience-activity-7297650760220057600-GBn0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAELRxAoBE8S8AMTbFhvzk9ZHWTyMVj7ScPM",
   },
   {
-    title: "AI Supply Chain Optimizer",
+    title: "VolksNet - AI Supply Chain Optimization & OEM Management",
     tech: ["Flask", "TensorFlow", "MongoDB", "Express.js"],
     desc: "ML-based forecasting with live supplier tracking and traffic-optimized logistics.",
-    github: "https://github.com/aadiithyyya",
-    demo: "https://linkedin.com/in/aadiithyyya",
+    github: "https://github.com/aadiithyyya/VolksNet-AI-Supply-Chain-and-OEM-Management",
+    demo: "https://www.linkedin.com/posts/aadiithyyya_imobilothon2024-hackathon-mobility-activity-7271881174862454784-Rl_L?utm_source=share&utm_medium=member_desktop&rcm=ACoAAELRxAoBE8S8AMTbFhvzk9ZHWTyMVj7ScPM",
   },
   {
-    title: "Financial Relationship Manager",
+    title: "CitiFI - Financial AI Relationship Manager",
     tech: ["React", "GPT-4o", "Streamlit", "PLAID API", "Flask"],
     desc: "Full-stack wealth insights app with real-time transactions and ML analytics.",
-    github: "https://github.com/aadiithyyya",
-    demo: "https://linkedin.com/in/aadiithyyya",
+    github: "https://github.com/aadiithyyya/CitiFI-AI-Fintech-Software-Citibank-Hackathon-2024",
+    demo: "https://www.linkedin.com/posts/aadiithyyya_hackathon-fintech-innovation-activity-7249408479587639296-q5aM?utm_source=share&utm_medium=member_desktop&rcm=ACoAAELRxAoBE8S8AMTbFhvzk9ZHWTyMVj7ScPM",
+  },
+   {
+    title: "My Fullstack Portfolio - Website",
+    tech: ["React", "JS", "Git - Vercel"],
+    desc: "Extremely Detailed Portfolio Website built from scratch for myself.",
+    github: "https://github.com/aadiithyyya/Aadi-Portfolio",
+  },
+  {
+    title: "SRMingle – Campus Networking Platform",
+    tech: ["Django", "SQLite", "HTML/CSS"],
+    desc: "Prototype for student-driven campus engagement and digital interaction.",
+    github: "https://github.com/aadiithyyya/SRMingle-University-Networking-Platform",
+  },
+  {
+    title: "Conversational AI Chatbot for University Queries",
+    tech: ["Django", "DistilBERT", "Websockets", "ML-Python"],
+    desc: "Prototype for student-driven campus engagement and digital interaction.",
+    github: "https://github.com/aadiithyyya/Conversational-AI-Chatbot-for-University-Queries",
   },
   {
     title: "Amazon Sales Data Analytics",
     tech: ["Pandas", "ETL", "Matplotlib"],
     desc: "Trend analysis on large-scale Amazon sales data using visual and statistical metrics.",
-    github: "https://github.com/aadiithyyya",
+    github: "https://github.com/aadiithyyya/Amazon-Sales-Data-Analytics",
   },
   {
     title: "Crop Production Analysis – India",
     tech: ["Python", "GeoData", "Pandas"],
     desc: "Spatio-temporal insights on agricultural yields, seasons, and regions.",
-    github: "https://github.com/aadiithyyya",
+    github: "https://github.com/aadiithyyya/Crop-Production-Analysis-in-India",
   },
-  {
-    title: "EEG-Based Mental State Recognition",
-    tech: ["TensorFlow", "EEG Signals", "NeuroSky"],
-    desc: "Deep learning on brainwaves to map emotion and cognitive states.",
-    github: "https://github.com/aadiithyyya",
-  },
-  {
-    title: "SRMingle – Campus Networking Platform",
-    tech: ["Django", "SQLite", "JavaScript"],
-    desc: "Prototype for student-driven campus engagement and digital interaction.",
-    github: "https://github.com/aadiithyyya",
-  },
+ 
 ];
 
 export default function Projects() {
@@ -98,7 +105,7 @@ export default function Projects() {
     <FaGithub className="icon-link" />
   </a>
   {p.demo && (
-    <a href={p.demo} target="_blank" rel="noopener noreferrer">Live Demo</a>
+    <a href={p.demo} target="_blank" rel="noopener noreferrer">Repo 👉🏻 Demo</a>
   )}
 </div>
 

@@ -63,7 +63,7 @@ const HeroPage = () => {
           <h1 className="hero-name">Aadithya Ram</h1>
           <p className="hero-role">SDE Intern @ SAP Labs</p>
           <p className="hero-bio">
-            Turning vision into products 🚀 | Full-Stack + AI + Data Science | Gen Z Builder & Hackathon Enthusiast
+            Turning my vision into products 🚀 | FullStack + AI ML + Data Science   #Building meaningful projects, one at a time!
           </p>
 
           <div className="hero-links">

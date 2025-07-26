@@ -4,7 +4,7 @@ const experience = [
   {
     role: "SDE Intern @ SAP Labs",
     time: "Aug 2025 – Present",
-    desc: "Starting this August in SAP Bangalore.",
+    desc: "Software Intern @ SAP Labs Bangalore, WhiteField.",
   },
   {
     role: "AI Intern @ Acmegrade",

@@ -4,7 +4,7 @@ const skills = {
   "Languages & Core": ["Python", "JavaScript", "C", "SQL"],
   "Frameworks & Libraries": ["React", "Node.js", "Flask", "Django", "Streamlit", "React Native"],
   "AI / ML / Data Science": ["TensorFlow", "PyTorch", "Scikit-Learn", "GPT-4", "BERT", "ARIMA", "NLP", "Deep Learning", "EDA", "Feature Engineering"],
-  "Databases & Cloud": ["MongoDB", "Firebase", "AWS S3", "SQLite"],
+  "Databases & Cloud": ["MongoDB", "Firebase", "SQL"],
   "APIs & Auth": ["PLAID API", "Appwrite", "OAuth 2.0", "GoogleAuth", "REST APIs"],
   "Tools & Platforms": ["VSCode", "Jupyter", "GitHub", "XCode", "Dialogflow", "Playwright", "Google Cloud"]
 };
