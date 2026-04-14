@@ -74,7 +74,7 @@ const HeroPage = () => {
         </div>
 
         <div className="hero-right" data-aos="zoom-in">
-          <img src="/assets/images/myimage.jpg" alt="Aadithya Ram" className="hero-img" />
+          <img src="/assets/images/Image (1).jpg" alt="Aadithya Ram" className="hero-img" />
         </div>
       </div>
 
