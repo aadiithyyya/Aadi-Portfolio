@@ -61,7 +61,7 @@ const HeroPage = () => {
       <div className="hero-card" data-aos="fade-up">
         <div className="hero-left">
           <h1 className="hero-name">Aadithya Ram</h1>
-          <p className="hero-role">SDE Intern @ SAP Labs</p>
+          <p className="hero-role">AI & Data Engineer Intern @ SAP Labs</p>
           <p className="hero-bio">
             Turning my vision into products 🚀 | FullStack + AI ML + Data Science   #Building meaningful projects, one at a time!
           </p>
