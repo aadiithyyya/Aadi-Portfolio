@@ -1,12 +1,12 @@
 import "./Skills.css";
 
 const skills = {
-  "Languages & Core": ["Python", "JavaScript", "C", "SQL"],
-  "Frameworks & Libraries": ["React", "Node.js", "Flask", "Django", "Streamlit", "React Native"],
-  "AI / ML / Data Science": ["TensorFlow", "PyTorch", "Scikit-Learn", "GPT-4", "BERT", "ARIMA", "NLP", "Deep Learning", "EDA", "Feature Engineering"],
-  "Databases & Cloud": ["MongoDB", "Firebase", "SQL"],
-  "APIs & Auth": ["PLAID API", "Appwrite", "OAuth 2.0", "GoogleAuth", "REST APIs"],
-  "Tools & Platforms": ["VSCode", "Jupyter", "GitHub", "XCode", "Dialogflow", "Playwright", "Google Cloud"]
+  "Languages & Core": ["Python", "JavaScript", "SQL", "C"],
+  "Frameworks & Libraries": ["React", "Node.js", "FastAPI", "Flask", "Streamlit", "LangChain", "LangGraph"],
+  "AI / ML / Data Science": ["TensorFlow", "PyTorch", "Scikit-Learn", "LLM Orchestration", "Agentic Architectures", "MCP", "NLP", "Deep Learning", "ARIMA", "Ensemble Methods", "Feature Engineering", "Predictive Modeling", "Computer Vision", "Prompt Engineering"],
+  "Databases & Cloud": ["PostgreSQL", "SAP HANA", "MongoDB", "SQL Systems", "Firebase", "SAP BTP", "Cloud Foundry"],
+  "APIs & Auth": ["REST APIs", "OAuth 2.0", "GoogleAuth", "PLAID API", "Appwrite"],
+  "Tools & Platforms": ["Databricks", "Kubernetes", "Spark", "Git", "Jupyter", "VSCode", "Metabase", "Jira", "Dialogflow", "Google Cloud", "Playwright"]
 };
 
 export default function Skills() {
