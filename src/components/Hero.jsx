@@ -67,7 +67,7 @@ const HeroPage = () => {
           </p>
 
           <div className="hero-links">
-            <a href="/assets/resume/Aadithya-Ram-Resume.pdf" target="_blank" rel="noopener noreferrer" className="hero-btn">📄 Resume</a>
+            <a href="/assets/resume/2026 Aadithya Ram Resume.pdf" target="_blank" rel="noopener noreferrer" className="hero-btn">📄 Resume</a>
             <a href="https://github.com/aadiithyyya" target="_blank" rel="noopener noreferrer" className="hero-btn">💻 GitHub</a>
             <a href="https://linkedin.com/in/aadiithyyya" target="_blank" rel="noopener noreferrer" className="hero-btn">🔗 LinkedIn</a>
           </div>
