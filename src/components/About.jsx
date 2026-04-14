@@ -1,5 +1,4 @@
 import "./About.css";
-
 export default function About() {
   return (
     <section id="about" className="about-section">
@@ -12,14 +11,12 @@ export default function About() {
         loop
         playsInline
       />
-
       <div className="about-content">
         <h2>About Me</h2>
         <p className="about-intro">
-I'm Aadithya — a Full-Stack + AI Developer and current AI & Data Engineer Intern at SAP Labs 🌐. I’ve got a deep enthusiasm for technology and its potential to benefit both society and businesses. I'm dedicated to continuous learning, staying ahead of emerging trends, and pushing my limits through hands-on projects and competitions.
-
-I thrive in environments where I can tackle meaningful challenges, grow under expert guidance, and make impactful contributions — all while crafting clean, immersive digital experiences.        </p>
-
+          I'm Aadithya — an AI & Data Engineer and current intern at SAP Labs 🌐, working across agentic platforms, LLM orchestration, and scalable data infrastructure. I have a deep enthusiasm for translating complex engineering into real business impact — from productionized enterprise AI systems to full-stack applications.
+          I thrive in environments where I can tackle meaningful challenges, grow under expert guidance, and make impactful contributions — all while crafting clean, immersive digital experiences.
+        </p>
         <div className="about-grid">
           {/* CARD 1 */}
           <div className="about-card">
@@ -33,13 +30,12 @@ I thrive in environments where I can tackle meaningful challenges, grow under ex
             />
             <h3>Core Skills</h3>
             <ul>
-              <li>Creative Problem Solver 🧠</li>
-              <li>Fast Learner ⚡</li>
+              <li>Agentic & LLM Systems 🤖</li>
+              <li>Data Engineering & Pipelines ⚙️</li>
+              <li>Fast Learner & Problem Solver ⚡</li>
               <li>Team-first Mentality 🤝</li>
-              <li>Detail-Oriented 👀</li>
             </ul>
           </div>
-
           {/* CARD 2 */}
           <div className="about-card">
             <video
@@ -52,13 +48,12 @@ I thrive in environments where I can tackle meaningful challenges, grow under ex
             />
             <h3>Currently...</h3>
             <ul>
-              <li> AI & Data Engineer Intern @ SAP Labs 🚀</li>
-              <li> Masters in CSE with Data Science @ SRM Institute 👨‍💻</li>
-              <li>Building side projects with exploring a wide-tech stack🛠️</li>
-             
+              <li>AI & Data Engineer Intern @ SAP Labs 🚀</li>
+              <li>M.Tech Integrated CSE (Data Science) @ SRM Institute 👨‍💻</li>
+              <li>IEEE Paper on MCP Framework — Awaiting Publication 📄</li>
+              <li>Building side projects across a wide tech stack 🛠️</li>
             </ul>
           </div>
-
           {/* CARD 3 */}
           <div className="about-card">
             <video
@@ -71,13 +66,12 @@ I thrive in environments where I can tackle meaningful challenges, grow under ex
             />
             <h3>Tech Stack</h3>
             <ul>
-              <li>Python, JS, C, SQL, TensorFlow, Flask</li>
-              <li> React, React Native, Node.js, MongoDB</li>
-              <li> GPT-4o, BERT, Appwrite, PLAID API</li>
-              <li> Firebase, Streamlit, OAuth2, Playwright</li>
+              <li>Python, SQL, JavaScript, FastAPI, Node.js</li>
+              <li>LangChain, LangGraph, MCP, Prompt Engineering</li>
+              <li>React, Streamlit, PostgreSQL, SAP HANA, MongoDB</li>
+              <li>Databricks, Kubernetes, Spark, SAP BTP, Cloud Foundry</li>
             </ul>
           </div>
-
           {/* CARD 4 */}
           <div className="about-card">
             <video
@@ -90,23 +84,23 @@ I thrive in environments where I can tackle meaningful challenges, grow under ex
             />
             <h3>Highlights</h3>
             <ul>
-              <li>Hackathons: Citibank, EY, Volkswagen 🏆 </li>
-              <li>Data Projects: Amazon Sales, Crop Analysis</li>
-              <li>Apps: HealthEZY, SafeZone, FRM Platform 📱</li>
-              <li>From my perspective to real-world apps</li>
+              <li>SAP Recognition Award (Monetary) — Dec 2025 🏅</li>
+              <li>Hackathons: Citibank, Volkswagen (Top 50 National) 🏆</li>
+              <li>Projects: MCP Framework, OEM Supply Chain AI 🔬</li>
+              <li>World Scholar's Cup — 3 Medals, Manila 🌍</li>
             </ul>
           </div>
         </div>
         <div
-        className="scroll-hint"
-        data-aos="fade-up"
-        onClick={() => {
-          document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
-        }}
-      >
-        <span className="scroll-text">scroll</span>
-        <div className="scroll-line" />
-      </div>
+          className="scroll-hint"
+          data-aos="fade-up"
+          onClick={() => {
+            document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          <span className="scroll-text">scroll</span>
+          <div className="scroll-line" />
+        </div>
       </div>
     </section>
   );
