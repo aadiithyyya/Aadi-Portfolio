@@ -2,12 +2,12 @@ import "./Experience.css";
 
 const experience = [
   {
-    role: "SDE Intern @ SAP Labs",
+    role: "AI & Data Engineer Intern @ SAP Labs",
     time: "Aug 2025 – Present",
     desc: "Software Intern @ SAP Labs Bangalore, WhiteField.",
   },
   {
-    role: "AI Intern @ Acmegrade",
+    role: "AI Trainee @ Acmegrade",
     time: "Dec 2024 – Feb 2025",
     desc: "Developed models using autoencoders, GPT-4, and DL pipelines.",
   },
