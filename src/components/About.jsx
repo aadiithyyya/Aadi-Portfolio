@@ -16,7 +16,7 @@ export default function About() {
       <div className="about-content">
         <h2>About Me</h2>
         <p className="about-intro">
-I'm Aadithya — a Full-Stack + AI Developer and current SDE Intern at SAP Labs 🌐. I’ve got a deep enthusiasm for technology and its potential to benefit both society and businesses. I'm dedicated to continuous learning, staying ahead of emerging trends, and pushing my limits through hands-on projects and competitions.
+I'm Aadithya — a Full-Stack + AI Developer and current AI & Data Engineer Intern at SAP Labs 🌐. I’ve got a deep enthusiasm for technology and its potential to benefit both society and businesses. I'm dedicated to continuous learning, staying ahead of emerging trends, and pushing my limits through hands-on projects and competitions.
 
 I thrive in environments where I can tackle meaningful challenges, grow under expert guidance, and make impactful contributions — all while crafting clean, immersive digital experiences.        </p>
 
@@ -52,10 +52,10 @@ I thrive in environments where I can tackle meaningful challenges, grow under ex
             />
             <h3>Currently...</h3>
             <ul>
-              <li> SDE Intern @ SAP Labs 🚀</li>
-              <li> Pursuing M.Tech CSE with Data Science @ SRM Institute 👨‍💻</li>
-              <li>Building side projects with GPT & React 🛠️</li>
-              <li>Prepping for career-level impact</li>
+              <li> AI & Data Engineer Intern @ SAP Labs 🚀</li>
+              <li> Masters in CSE with Data Science @ SRM Institute 👨‍💻</li>
+              <li>Building side projects with exploring a wide-tech stack🛠️</li>
+             
             </ul>
           </div>
 
